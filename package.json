@@ -8,14 +8,14 @@
     "react-scripts-ts": "2.8.0"
   },
   "scripts": {
-    "build:scss": "node-sass-chokidar src/ -o src/",
+    "build:scss": "node-sass-chokidar src/ --include-path ./node_modules -o src/",
     "build:ts": "react-scripts-ts build",
     "build": "npm-run-all build:scss build:ts",
     "eject": "react-scripts-ts eject",
     "start:ts": "react-scripts-ts start",
     "start": "npm-run-all -p watch:scss start:ts",
     "test": "react-scripts-ts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
-    "watch:scss": "npm run build:scss && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "watch:scss": "npm run build:scss && node-sass-chokidar src/ --include-path ./node_modules -o src/ --watch --recursive"
   },
   "devDependencies": {
     "@types/jest": "^22.0.0",
