@@ -5,6 +5,7 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/dist": true
+        "**/dist": true,
+        "**/*.css": { "when": "$(basename).scss" }
     }
 }
